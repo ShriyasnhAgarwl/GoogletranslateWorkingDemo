@@ -28,7 +28,7 @@ function GoogleTranslateDemoContainer(props) {
         text: textToConvert,
         targetLanguage: targetLanguage,
       });
-      console.log(response);
+      //   console.log(response);
       setConvertedText(response.data.translatedText);
     } catch (error) {
       console.error("Error translating text:", error);
@@ -39,10 +39,10 @@ function GoogleTranslateDemoContainer(props) {
       try {
         const response = await axios.get(`${backendUrl}/languages`);
         const languages = response.data.languages;
-        console.log("Languages:");
-        languages.forEach((language) =>
-          console.log(language.code, language.name)
-        );
+        // console.log("Languages:");
+        // languages.forEach((language) =>
+        //   console.log(language.code, language.name)
+        // );
       } catch (error) {
         console.error("Error fetching languages:", error);
       }
